@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend-deployment
-        image: 654654554686.dkr.ecr.us-west-1.amazonaws.com/dvn-workshop/production/backend
+        image: 794038226274.dkr.ecr.us-east-1.amazonaws.com/devops-project/production/backend
         ports:
         - containerPort: 80

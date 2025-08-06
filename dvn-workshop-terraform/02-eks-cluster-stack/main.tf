@@ -11,9 +11,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket       = "workshop-s3-remote-backend-bucket"
+    bucket       = "devopsproject-s3-remote-backend-bucket"
     key          = "eks-cluster-stack/terraform.tfstate"
-    region       = "us-west-1"
+    region       = "us-east-1"
     use_lockfile = true
     # dynamodb_table = "workshop-s3-state-locking-table"
   }

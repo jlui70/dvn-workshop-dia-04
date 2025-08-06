@@ -1,7 +1,7 @@
 variable "tags" {
   type = map(string)
   default = {
-    Project     = "workshop-devops-na-nuvem"
+    Project     = "terraform-devops-project"
     Environment = "production"
   }
 }
@@ -13,8 +13,8 @@ variable "auth" {
   })
 
   default = {
-    assume_role_arn = "arn:aws:iam::654654554686:role/workshop-role"
-    region          = "us-west-1"
+    assume_role_arn = "arn:aws:iam::794038226274:role/workshop-role"
+    region          = "us-east-1"
   }
 }
 
@@ -35,7 +35,7 @@ variable "eks_cluster" {
   })
 
   default = {
-    name    = "workshop-eks-cluster"
+    name    = "DevopsProject-eks-cluster"
     version = "1.31"
     enabled_cluster_log_types = [
       "api",
@@ -45,7 +45,7 @@ variable "eks_cluster" {
       "scheduler",
     ]
     access_config_authentication_mode = "API_AND_CONFIG_MAP"
-    node_group_name                   = "workshop-eks-node-group"
+    node_group_name                   = "devopsproject-eks-node-group"
     node_group_instance_types         = ["t3.medium"]
     node_group_capacity_type          = "ON_DEMAND"
     node_group_scaling_config = {
@@ -64,11 +64,11 @@ variable "ecr_repositories" {
 
   default = [
     {
-      name                 = "dvn-workshop/production/backend"
+      name                 = "devops-project/production/backend"
       image_tag_mutability = "MUTABLE"
     },
     {
-      name                 = "dvn-workshop/production/frontend"
+      name                 = "devops-project/production/frontend"
       image_tag_mutability = "MUTABLE"
     }
   ]

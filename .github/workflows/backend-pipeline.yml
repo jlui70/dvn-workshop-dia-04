@@ -12,7 +12,7 @@ permissions:
   id-token: write
   
 env:
-    BACKEND_REPOSITORY: dvn-workshop/production/backend
+    BACKEND_REPOSITORY: devops-project/production/backend
     IMAGE_TAG: ${{ github.sha }}
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
 
     - uses: actions/checkout@v4
       with:
-        repository: kenerry-serain/dvn-workshop-dia-04-gitops
+        repository: jlui70/dvn-workshop-dia-04-gitops
         token: ${{ secrets.PAT }}
 
     - name: Kustomize Edit Image

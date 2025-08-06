@@ -1,7 +1,7 @@
 variable "tags" {
   type = map(string)
   default = {
-    Project     = "workshop-devops-na-nuvem"
+    Project     = "terraform-devops-project"
     Environment = "production"
   }
 }
@@ -13,8 +13,8 @@ variable "auth" {
   })
 
   default = {
-    assume_role_arn = "arn:aws:iam::654654554686:role/workshop-role"
-    region          = "us-west-1"
+    assume_role_arn = "arn:aws:iam::794038226274:role/workshop-role"
+    region          = "us-east-1"
   }
 }
 
@@ -41,34 +41,34 @@ variable "vpc" {
   })
 
   default = {
-    name                     = "workshop-devops-na-nuvem-vpc"
+    name                     = "devopsproject-vpc"
     cidr_block               = "10.0.0.0/24"
-    internet_gateway_name    = "workshop-devops-na-nuvem-internet-gateway"
-    nat_gateway_name         = "workshop-devops-na-nuvem-nat-gateway"
-    public_route_table_name  = "workshop-devops-na-nuvem-public-route-table"
-    private_route_table_name = "workshop-devops-na-nuvem-private-route-table"
+    internet_gateway_name    = "devopsproject-internet-gateway"
+    nat_gateway_name         = "devopsproject-nat-gateway"
+    public_route_table_name  = "devopsproject-public-route-table"
+    private_route_table_name = "devopsproject-private-route-table"
     public_subnets = [{
-      name                    = "workshop-devops-na-nuvem-vpc-public-subnet-1a"
+      name                    = "devopsproject-vpc-public-subnet-1a"
       cidr_block              = "10.0.0.0/26"
-      availability_zone       = "us-west-1a"
+      availability_zone       = "us-east-1a"
       map_public_ip_on_launch = true
       },
       {
-        name                    = "workshop-devops-na-nuvem-vpc-public-subnet-1c"
+        name                    = "devopsproject-vpc-public-subnet-1c"
         cidr_block              = "10.0.0.64/26"
-        availability_zone       = "us-west-1c"
+        availability_zone       = "us-east-1c"
         map_public_ip_on_launch = true
     }]
     private_subnets = [{
-      name                    = "workshop-devops-na-nuvem-vpc-private-subnet-1a"
+      name                    = "devopsproject-vpc-private-subnet-1a"
       cidr_block              = "10.0.0.128/26"
-      availability_zone       = "us-west-1a"
+      availability_zone       = "us-east-1a"
       map_public_ip_on_launch = false
       },
       {
-        name                    = "workshop-devops-na-nuvem-vpc-private-subnet-1c"
+        name                    = "devopsproject-vpc-private-subnet-1c"
         cidr_block              = "10.0.0.192/26"
-        availability_zone       = "us-west-1c"
+        availability_zone       = "us-east-1c"
         map_public_ip_on_launch = false
     }]
   }
