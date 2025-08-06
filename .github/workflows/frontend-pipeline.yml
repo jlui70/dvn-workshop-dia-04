@@ -12,7 +12,7 @@ permissions:
   id-token: write
   
 env:
-    FRONTEND_REPOSITORY: devops-project/production/backend
+    FRONTEND_REPOSITORY: devops-project/production/frontend
     IMAGE_TAG: ${{ github.sha }}
 
 jobs:
