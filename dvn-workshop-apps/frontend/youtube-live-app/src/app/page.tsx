@@ -52,7 +52,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            Encontre informações detalhadas sobre os recursos e a API do Next.js.
           </p>
         </a>
 
@@ -69,7 +69,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            Aprenda sobre Next.js em um curso interativo com questionários!
           </p>
         </a>
 
@@ -86,7 +86,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+            Explore modelos iniciais para Next.js.
           </p>
         </a>
 
@@ -103,7 +103,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Implante instantaneamente seu site Next.js em uma URL compartilhável com o Vercel.
           </p>
         </a>
       </div>
